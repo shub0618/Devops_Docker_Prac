@@ -1,0 +1,32 @@
+#!/bin/bash
+# simple script to install the docker engine on linux  machine 
+
+
+# intsalling docker using convenience script 
+curl -fsSL https://get.docker.com -o get-docker.sh
+# you should get a get-docker.sh script after running the upper command
+
+# You can run the script with the --dry-run option to learn what steps the script will run when invoked:
+sudo sh ./get-docker.sh --dry-run
+
+# run this command to get the docker installed 
+sudo sh ./get-docker.sh
+
+# to check if the docker is sucessfully installed
+sudo docker version
+
+# pull the docker image from docker hub
+sudo docker pull ok7827125/whalesay
+
+# Whalesay is Dockers version of cowsay which is basically a simple application that trains a cow saying something in this case it happens to be a whale 
+# copy the docker run command given here.
+# Remember to add sudo and we will change the message to Hello world
+
+sudo docker run ok7827125/whalesay:mytag1 cowsay hello
+
+# and running this command Docker pulls the image of the whalesay the application from Docker Hub and runs
+# it and we have our whale saying hello.
+
+# We're all set.
+
+
